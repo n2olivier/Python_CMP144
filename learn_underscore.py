@@ -1,17 +1,22 @@
-class Fruit:
-    def __init__(self, taste, season, color):
-        self.color = color        # public
-        self._taste = taste       # protected (convention)
-        self.__password = season  # private (name mangling)
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-    def call(self):
-        return "The " + self.color + " fruit is available in " + self.__password
+    def display_info(self):
+        return f"Name: {self.name}, Age: {self.age}"
 
-# Create object
-f = Fruit("Sweet", "Summer", "Red")
 
-print(f.color)          
-print(f._taste)          
-print(f._Fruit__password)
-print(f._Fruit__password)
-# self is the instance of the class
+class Student(Person):
+    def __init__(self, name, age, grade):
+        super().__init__(name, age)
+        self.grade = grade
+
+    def display_info(self):
+        return f"{super().display_info()}, Grade: {self.grade}"
+
+
+student = Student("John", 15, "10th")
+print(student.display_info())
+
+
