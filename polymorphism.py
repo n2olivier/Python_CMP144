@@ -1,4 +1,3 @@
-# file: polymorphism_simple.py
 
 class Animal:
     def sound(self):

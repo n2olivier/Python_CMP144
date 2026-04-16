@@ -1,5 +1,3 @@
-# file: polymorphism_multilevel_hybrid.py
-
 # ---------- Multilevel Inheritance ----------
 
 class Animal:
