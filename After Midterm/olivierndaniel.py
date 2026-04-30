@@ -1,7 +1,6 @@
 class Daniel_k20250941_Olivier_K20250907(Exception):
     pass
 
-
 class CMP142:
     def __init__(self, attendance):
         self.attendance = attendance
